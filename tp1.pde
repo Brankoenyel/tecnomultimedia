@@ -45,7 +45,6 @@ void setup() {
 void draw() {
   background(255);
   
-  // Dibujar la pantalla actual
   image(imagenes[pantallaActual - 1], 0, 0, width, height);
   fill(#F06A6D);
   textAlign(CENTER, CENTER);
@@ -53,7 +52,7 @@ void draw() {
   textFont(createFont("times new Roman", 30));
   text(texto[pantallaActual - 1], textoX[pantallaActual - 1], textoY[pantallaActual - 1]);
   
-  // Animación del texto
+  // Animación del tex
   textoX[pantallaActual - 1] += textosVelX[pantallaActual - 1];
   textoY[pantallaActual - 1] += textosVelY[pantallaActual - 1];
   
