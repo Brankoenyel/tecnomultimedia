@@ -53,11 +53,11 @@ void draw() {
   textFont(createFont("times new Roman", 30));
   text(texto[pantallaActual - 1], textoX[pantallaActual - 1], textoY[pantallaActual - 1]);
   
-  // Animación del texto (movimiento)
+  // Animación del texto
   textoX[pantallaActual - 1] += textosVelX[pantallaActual - 1];
   textoY[pantallaActual - 1] += textosVelY[pantallaActual - 1];
   
-   // rebote del texto en limites de la pantalla
+   // rebote 
   if (textoX[pantallaActual - 1] <= 0 || textoX[pantallaActual - 1] >= width) {
     textosVelX[pantallaActual - 1] *= -1;
      }
@@ -66,13 +66,13 @@ void draw() {
   }
     
   
-  // Transición automática a la siguiente pantalla 
-  if (millis() >= tiempoTransicion && pantallaActual < 3) {
+  
+ if (millis() >= tiempoTransicion && pantallaActual < 3) {
     pantallaActual++;
     tiempoTransicion = millis() + 5000; 
   }
   
- // Botón de reinicio
+ // Botón 
   if (pantallaActual == 3) {
     fill(255, 0, 0);
     rect(botonX, botonY, botonAncho, botonAlto);
